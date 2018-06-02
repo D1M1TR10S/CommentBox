@@ -4,5 +4,7 @@ CommentBox is a mobile app that allows businesses to privately receive anonymous
 
 ## Technology Stack
 Platform: iOs mobile
+
 Languages: HTML, CSS, Swift, Xcode, MySQL(Vapor)
+
 Design: Gravit Designer
