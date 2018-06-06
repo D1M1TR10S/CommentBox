@@ -1,15 +1,15 @@
 //
-//  PlaceController.swift
-//  Pods-CommentBox
+//  thankyouViewController.swift
+//  CommentBox
 //
-//  Created by Dimitrios Philliou on 6/1/18.
+//  Created by Dimitrios Philliou on 6/5/18.
+//  Copyright © 2018 Dimitrios. All rights reserved.
 //
 
 import UIKit
-import GooglePlaces
 
-class PlaceController: UIViewController {
-
+class thankyouViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

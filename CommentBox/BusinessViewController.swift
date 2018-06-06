@@ -5,17 +5,30 @@
 //  Created by Dimitrios Philliou on 6/1/18.
 //
 
-import UIKit
 import GooglePlaces
+import UIKit
+
 
 class BusinessViewController: UIViewController {
 
+    // Dictionary holding business info
     var businessDict : [String: Any] = [:]
     
-    @IBOutlet weak var businessIcon: UIImageView!
+    //string variable to hold the user's comment
+    var comment: String = ""
+    
     @IBOutlet weak var businessName: UILabel!
     @IBOutlet weak var businessAddress: UILabel!
     @IBOutlet weak var businessSite: UILabel!
+
+    
+    @IBOutlet weak var postComment: UITextView!
+    @IBAction func commentButton(_ sender: Any) {
+        comment = postComment.text!
+        print("Comment: \(comment)")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         businessName.text = businessDict["name"] as! String

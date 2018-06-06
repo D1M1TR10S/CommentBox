@@ -15,6 +15,7 @@
 		4587BC4B20C0FA2C00E0CEF7 /* CommentBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4587BC4A20C0FA2C00E0CEF7 /* CommentBoxTests.swift */; };
 		4587BC5620C0FA2D00E0CEF7 /* CommentBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4587BC5520C0FA2D00E0CEF7 /* CommentBoxUITests.swift */; };
 		45D3AA1D20C13A1F0051E3E5 /* BusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D3AA1C20C13A1F0051E3E5 /* BusinessViewController.swift */; };
+		45E2F90420C739A300A58254 /* thankyouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E2F90320C739A300A58254 /* thankyouViewController.swift */; };
 		B0836BBB294A523A37B1DEFE /* libPods-CommentBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3708DBA88B315DE9DD89F780 /* libPods-CommentBox.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		4587BC5520C0FA2D00E0CEF7 /* CommentBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentBoxUITests.swift; sourceTree = "<group>"; };
 		4587BC5720C0FA2D00E0CEF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45D3AA1C20C13A1F0051E3E5 /* BusinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
+		45E2F90320C739A300A58254 /* thankyouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thankyouViewController.swift; sourceTree = "<group>"; };
 		6B5BA642C5424E2EA62A9B74 /* libPods-CommentBoxUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CommentBoxUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FFDBC41FA6CBE2BFF0BAB1 /* Pods-CommentBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommentBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-CommentBox/Pods-CommentBox.release.xcconfig"; sourceTree = "<group>"; };
 		B98128446C1904D3D9A49BE2 /* Pods-CommentBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommentBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CommentBox/Pods-CommentBox.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				4587BC3520C0FA2900E0CEF7 /* AppDelegate.swift */,
+				45E2F90320C739A300A58254 /* thankyouViewController.swift */,
 				4587BC3720C0FA2900E0CEF7 /* ViewController.swift */,
 				45D3AA1C20C13A1F0051E3E5 /* BusinessViewController.swift */,
 				4587BC3920C0FA2900E0CEF7 /* Main.storyboard */,
@@ -331,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45D3AA1D20C13A1F0051E3E5 /* BusinessViewController.swift in Sources */,
+				45E2F90420C739A300A58254 /* thankyouViewController.swift in Sources */,
 				4587BC3820C0FA2900E0CEF7 /* ViewController.swift in Sources */,
 				4587BC3620C0FA2900E0CEF7 /* AppDelegate.swift in Sources */,
 			);
