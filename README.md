@@ -38,4 +38,5 @@ iPhone(iOs)
 ## Authors
 
 Dimitrios Philliou – [@dimitriphilio](https://twitter.com/dimitriphilio?lang=en) – dimitriosphilliou@gmail.com
+
 Jacob Hartman – [@jacobbhartman](https://twitter.com/JacobBHartman?lang=en) – jacobbhartman@protonmail.com
