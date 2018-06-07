@@ -4,7 +4,7 @@
 
 CommentBox is a mobile iOs app that allows businesses to receive anonymous suggestions from its customers then conduct a poll on these suggestions in order to gain valuable insights on the customer experience.
 
-![alt text](https://github.com/Dimitriopolous/CommentBox/blob/master/Graphics/AppVisual.png)
+![alt text](https://github.com/Dimitriopolous/CommentBox/blob/master/Graphics/Storyboards.png)
 
 
 ## Technology Stack
