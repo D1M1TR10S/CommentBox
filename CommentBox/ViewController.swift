@@ -69,11 +69,14 @@ extension ViewController: GMSAutocompleteViewControllerDelegate {
         print("Place address: \(place.formattedAddress)")
         print("Place website: \(place.website)")
         print("Place dictionary: \(place)")
-        let placeDict : [String: Any] = ["name": place.name,
+        var placeDict : [String: Any] = ["name": place.name,
                                          "address": place.formattedAddress,
-                                         "website": place.website!.absoluteString,
+                                         //"website": place.website!.absoluteString,
                                          "placeID": place.placeID]
 
+        if place.website != nil {
+            placeDict["website"] = place.website!.absoluteString
+        }
         //let placeDict["website"] = place.website ?? ""
         //App crashes if place.website == nil. Need to debug.
         

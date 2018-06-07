@@ -10,10 +10,10 @@
 		4587BC3620C0FA2900E0CEF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4587BC3520C0FA2900E0CEF7 /* AppDelegate.swift */; };
 		4587BC3820C0FA2900E0CEF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4587BC3720C0FA2900E0CEF7 /* ViewController.swift */; };
 		4587BC3B20C0FA2900E0CEF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4587BC3920C0FA2900E0CEF7 /* Main.storyboard */; };
-		4587BC3D20C0FA2C00E0CEF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4587BC3C20C0FA2C00E0CEF7 /* Assets.xcassets */; };
 		4587BC4020C0FA2C00E0CEF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4587BC3E20C0FA2C00E0CEF7 /* LaunchScreen.storyboard */; };
 		4587BC4B20C0FA2C00E0CEF7 /* CommentBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4587BC4A20C0FA2C00E0CEF7 /* CommentBoxTests.swift */; };
 		4587BC5620C0FA2D00E0CEF7 /* CommentBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4587BC5520C0FA2D00E0CEF7 /* CommentBoxUITests.swift */; };
+		45BBE85C20C8ADB8002FA9D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45BBE85B20C8ADB8002FA9D2 /* Assets.xcassets */; };
 		45D3AA1D20C13A1F0051E3E5 /* BusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D3AA1C20C13A1F0051E3E5 /* BusinessViewController.swift */; };
 		45E2F90420C739A300A58254 /* thankyouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E2F90320C739A300A58254 /* thankyouViewController.swift */; };
 		B0836BBB294A523A37B1DEFE /* libPods-CommentBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3708DBA88B315DE9DD89F780 /* libPods-CommentBox.a */; };
@@ -42,7 +42,6 @@
 		4587BC3520C0FA2900E0CEF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4587BC3720C0FA2900E0CEF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4587BC3A20C0FA2900E0CEF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4587BC3C20C0FA2C00E0CEF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4587BC3F20C0FA2C00E0CEF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4587BC4120C0FA2C00E0CEF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4587BC4620C0FA2C00E0CEF7 /* CommentBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommentBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +50,7 @@
 		4587BC5120C0FA2D00E0CEF7 /* CommentBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommentBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4587BC5520C0FA2D00E0CEF7 /* CommentBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentBoxUITests.swift; sourceTree = "<group>"; };
 		4587BC5720C0FA2D00E0CEF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45BBE85B20C8ADB8002FA9D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45D3AA1C20C13A1F0051E3E5 /* BusinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
 		45E2F90320C739A300A58254 /* thankyouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thankyouViewController.swift; sourceTree = "<group>"; };
 		6B5BA642C5424E2EA62A9B74 /* libPods-CommentBoxUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CommentBoxUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,10 +122,10 @@
 				4587BC3520C0FA2900E0CEF7 /* AppDelegate.swift */,
 				45E2F90320C739A300A58254 /* thankyouViewController.swift */,
 				4587BC3720C0FA2900E0CEF7 /* ViewController.swift */,
-				4587BC3920C0FA2900E0CEF7 /* Main.storyboard */,
 				45D3AA1C20C13A1F0051E3E5 /* BusinessViewController.swift */,
-				4587BC3C20C0FA2C00E0CEF7 /* Assets.xcassets */,
+				4587BC3920C0FA2900E0CEF7 /* Main.storyboard */,
 				4587BC3E20C0FA2C00E0CEF7 /* LaunchScreen.storyboard */,
+				45BBE85B20C8ADB8002FA9D2 /* Assets.xcassets */,
 				4587BC4120C0FA2C00E0CEF7 /* Info.plist */,
 			);
 			path = CommentBox;
@@ -266,7 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4587BC4020C0FA2C00E0CEF7 /* LaunchScreen.storyboard in Resources */,
-				4587BC3D20C0FA2C00E0CEF7 /* Assets.xcassets in Resources */,
+				45BBE85C20C8ADB8002FA9D2 /* Assets.xcassets in Resources */,
 				4587BC3B20C0FA2900E0CEF7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

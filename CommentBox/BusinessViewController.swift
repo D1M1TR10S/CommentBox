@@ -24,10 +24,15 @@ class BusinessViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Filling labels with business info
         businessName.text = businessDict["name"] as! String
         businessAddress.text = businessDict["address"] as! String
-        businessSite.text = businessDict["website"] as! String
+        if businessDict["website"] != nil {
+            businessSite.text = businessDict["website"] as! String
+        } else {
+            businessSite.text = ""
+        }
         
         print("commentDict: \(type(of: commentDict))\n\n\n\n\n\n\n\n\n")
         //Filling list with dictionary values
