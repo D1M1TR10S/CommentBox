@@ -39,7 +39,7 @@ class BusinessViewController: UIViewController, UITableViewDelegate, UITableView
         for (_, val) in commentDict {
             dataModel.append(val)
         }
-        print("dataModel: \(dataModel)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+        print("dataModel: \(dataModel)\n\n\n\n\n\n\n\n\n")
         
         tableView.delegate = self
         tableView.dataSource = self

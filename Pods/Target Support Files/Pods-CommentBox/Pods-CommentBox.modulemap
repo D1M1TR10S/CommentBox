@@ -1,0 +1,6 @@
+module Pods_CommentBox {
+  umbrella header "Pods-CommentBox-umbrella.h"
+
+  export *
+  module * { export * }
+}
