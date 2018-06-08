@@ -103,7 +103,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.1139601394534111" green="0.36461031436920166" blue="0.55876648426055908" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.11440455168485641" green="0.36420160531997681" blue="0.55502784252166748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="g7J-mX-avo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2W0-W5-ep0"/>
                             <constraint firstItem="hBX-tC-v5J" firstAttribute="trailing" secondItem="iPS-g5-5ho" secondAttribute="trailing" id="7au-0F-fN4"/>
@@ -142,7 +142,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="746"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="www.business.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5X-Np-MRu">
-                                        <rect key="frame" x="20" y="178" width="374" height="29"/>
+                                        <rect key="frame" x="20" y="170" width="374" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.95764785289999999" green="0.96112275680000003" blue="0.96561706849999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -186,16 +186,6 @@
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Business" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnt-kb-fuU">
-                                        <rect key="frame" x="1" y="93" width="374" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="FfN-zA-G4m"/>
-                                            <constraint firstAttribute="width" constant="374" id="m4S-r7-UjC"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
-                                        <color key="textColor" red="0.9576478528964425" green="0.96112275676180725" blue="0.96561706852791873" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tbb-5l-Kg7">
                                         <rect key="frame" x="8" y="558" width="398" height="105"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -239,6 +229,16 @@
                                         <color key="textColor" red="0.95764785289999999" green="0.96112275680000003" blue="0.96561706849999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Business" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnt-kb-fuU">
+                                        <rect key="frame" x="20" y="95" width="374" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="FfN-zA-G4m"/>
+                                            <constraint firstAttribute="width" constant="374" id="m4S-r7-UjC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                        <color key="textColor" red="0.9576478528964425" green="0.96112275676180725" blue="0.96561706852791873" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="tbb-5l-Kg7" firstAttribute="leading" secondItem="bhw-KN-ABh" secondAttribute="leadingMargin" id="2Ad-uy-uuA"/>
@@ -249,7 +249,7 @@
                                     <constraint firstItem="NEb-xO-VFk" firstAttribute="centerY" secondItem="bhw-KN-ABh" secondAttribute="centerY" constant="313" id="EcZ-xw-SzT"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="VKU-jY-YBx" secondAttribute="trailing" id="MDk-vr-bjn"/>
                                     <constraint firstItem="NEb-xO-VFk" firstAttribute="width" secondItem="VKU-jY-YBx" secondAttribute="width" id="MYN-PU-xH0"/>
-                                    <constraint firstItem="bnt-kb-fuU" firstAttribute="centerY" secondItem="bhw-KN-ABh" secondAttribute="centerY" constant="-265" id="NrY-xg-LB0"/>
+                                    <constraint firstItem="bnt-kb-fuU" firstAttribute="centerY" secondItem="bhw-KN-ABh" secondAttribute="centerY" constant="-256" id="S6h-aj-Xeq"/>
                                     <constraint firstItem="tbb-5l-Kg7" firstAttribute="centerX" secondItem="bhw-KN-ABh" secondAttribute="centerX" id="Tog-dL-P3o"/>
                                     <constraint firstItem="NEb-xO-VFk" firstAttribute="leading" secondItem="bhw-KN-ABh" secondAttribute="leadingMargin" id="Yf2-WP-lfA"/>
                                     <constraint firstItem="NEb-xO-VFk" firstAttribute="leading" secondItem="bhw-KN-ABh" secondAttribute="leadingMargin" id="Ygj-oZ-hIK"/>
@@ -384,6 +384,6 @@
         <image name="CommentBox-logo" width="360" height="80"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gdk-BY-Cy5"/>
+        <segue reference="815-MU-MIb"/>
     </inferredMetricsTieBreakers>
 </document>
