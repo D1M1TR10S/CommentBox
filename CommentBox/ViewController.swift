@@ -14,21 +14,24 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // Label over search bar to hold the business name
     @IBOutlet weak var label: UILabel!
     
-    //Dictionary holding all information about a selected business
+    // Dictionary holding all information about a selected business
     var businessDict : [String:Any] = [:]
     
-    //Dictionary holding all comments associated with a selected business
+    // Dictionary holding all comments associated with a selected business
     var commentDict : [Int:String] = [:]
     
     // Presents the Autocomplete view controller when the button is pressed.
+    // Allows the user to select the location matching their search query
     @IBAction func autocompleteClicked(_ sender: UIButton) {
         let autocompleteController = GMSAutocompleteViewController()
         autocompleteController.delegate = self
         present(autocompleteController, animated: true, completion: nil)
     }
     
+    // Segue to the BusinessViewController and send it the businessDict and commentDict
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "businessSegue" {
             let placeController = segue.destination as! BusinessViewController
@@ -43,15 +46,15 @@ class ViewController: UIViewController {
     }
     
     func downloadComments(_ businessID: String!) -> Dictionary<Int, String> {
-        //API call. Append placeID to the end once routes are setup
+        //HTTP GET request to the API to receive all relevant comments
         let commentsURL = "http://167.99.107.99:5000/comments"
         Alamofire.request(commentsURL).responseJSON { response in
-            print("\n\n\n\n\n\n - response: \(response)\n\n\n\n\n\n")
+            print("\n\n\n\n\n\n - HTTP GET response: \(response)\n\n\n\n\n\n")
             var json = JSON(response.data!)
             for var i in 0...json.count {
                 if json[i]["placeID"].stringValue == businessID {
                     self.commentDict[json[i]["id"].intValue] = json[i]["actual"].stringValue
-                    print("json[i]: \(json[i])")
+                    print("json items matching placeID: \(json[i])")
                 }
             }
         }
@@ -64,6 +67,7 @@ extension ViewController: GMSAutocompleteViewControllerDelegate {
 
     
     // Handle the user's selection.
+    // Call Google Places API
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         print("Place name: \(place.name)")
         print("Place address: \(place.formattedAddress)")
@@ -71,18 +75,18 @@ extension ViewController: GMSAutocompleteViewControllerDelegate {
         print("Place dictionary: \(place)")
         var placeDict : [String: Any] = ["name": place.name,
                                          "address": place.formattedAddress,
-                                         //"website": place.website!.absoluteString,
                                          "placeID": place.placeID]
-
+        // Add a website key and value to placeDict if place.website exists
         if place.website != nil {
             placeDict["website"] = place.website!.absoluteString
         }
-        //let placeDict["website"] = place.website ?? ""
-        //App crashes if place.website == nil. Need to debug.
         
+        // Set businessDict in current class to local placeDict
         businessDict = placeDict
+        // Initialize commentDict with all the comments returned from downloadComments() function
         commentDict = downloadComments(place.placeID)
 
+        // Set label over search bar to place.name so the user knows their selection was received
         label.text = " " + place.name
         dismiss(animated: true, completion: nil)
     }

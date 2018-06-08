@@ -10,7 +10,7 @@ import GooglePlaces
 import UIKit
 
 
-class BusinessViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BusinessViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate {
 
     // Dictionary holding business info
     var businessDict : [String: Any] = [:]
@@ -21,11 +21,16 @@ class BusinessViewController: UIViewController, UITableViewDelegate, UITableView
     //string variable to hold the user's comment
     var comment: String = ""
     
+    //Declaring label outlets to dynamically produce business info
+    @IBOutlet weak var businessName: UILabel!
+    @IBOutlet weak var businessAddress: UILabel!
+    @IBOutlet weak var businessSite: UILabel!
+    @IBOutlet var ScrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Filling labels with business info
+        // Initializing labels with business info to produce the business page dynamically
         businessName.text = businessDict["name"] as! String
         businessAddress.text = businessDict["address"] as! String
         if businessDict["website"] != nil {
@@ -34,12 +39,10 @@ class BusinessViewController: UIViewController, UITableViewDelegate, UITableView
             businessSite.text = ""
         }
         
-        print("commentDict: \(type(of: commentDict))\n\n\n\n\n\n\n\n\n")
         //Filling list with dictionary values
         for (_, val) in commentDict {
             dataModel.append(val)
         }
-        print("dataModel: \(dataModel)\n\n\n\n\n\n\n\n\n")
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -49,25 +52,21 @@ class BusinessViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func postComment(_ comment: String) {
-        //API call. Append placeID to the end once routes are setup
+        //HTTP POST request to the CommentBox comments database
         let commentsURL = "http://167.99.107.99:5000/comments"
         let parameters = ["placeID": businessDict["placeID"] as! String, "actual": comment]
         print("parameters: \(parameters)")
         Alamofire.request(commentsURL, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
-            print("POST request response: \(response)\n\n\n\n\n\n\n\n\n\n\n")
+            print("POST response: \(response)\n\n\n\n\n\n\n\n\n\n\n")
         }
     }
     
-    @IBOutlet weak var businessName: UILabel!
-    @IBOutlet weak var businessAddress: UILabel!
-    @IBOutlet weak var businessSite: UILabel!
 
-    
     @IBOutlet weak var tableView: UITableView!
-    //Declaring an array for the tableView
+    //Declaring an array to populate the tableView with comments
     var dataModel : [String] = []
 
-    
+    //Declaring tableview functionalities
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -83,7 +82,24 @@ class BusinessViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    // Outlets connecting to the comment TextView
+    // Scrolls the ScrollView up when keyboard is present
     @IBOutlet weak var postComment: UITextView!
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        ScrollView.setContentOffset(CGPoint(x: 0, y: 250), animated: true)
+    }
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    func textViewDidEndEditing(_ textView: UITextView) {
+        ScrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+    }
+    
+    
     @IBAction func commentButton(_ sender: Any) {
         comment = postComment.text!
         postComment(comment)
