@@ -82,6 +82,10 @@ class BusinessViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    @IBAction func upvote(_ sender: UIButton) {
+        
+    }
+    
     // Outlets connecting to the comment TextView
     // Scrolls the ScrollView up when keyboard is present
     @IBOutlet weak var postComment: UITextView!

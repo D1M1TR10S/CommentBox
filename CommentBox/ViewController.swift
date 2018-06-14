@@ -50,11 +50,13 @@ class ViewController: UIViewController {
         let commentsURL = "http://167.99.107.99:5000/comments"
         Alamofire.request(commentsURL).responseJSON { response in
             print("\n\n\n\n\n\n - HTTP GET response: \(response)\n\n\n\n\n\n")
-            var json = JSON(response.data!)
-            for var i in 0...json.count {
-                if json[i]["placeID"].stringValue == businessID {
-                    self.commentDict[json[i]["id"].intValue] = json[i]["actual"].stringValue
-                    print("json items matching placeID: \(json[i])")
+            var comment = JSON(response.data!)
+            print("json variable: \(comment)")
+            for i in 0...comment.count {
+                if comment[i]["placeID"].stringValue == businessID {
+                    self.commentDict[comment[i]["id"].intValue] = comment[i]["id"].stringValue
+                    self.commentDict[comment[i]["text"].intValue] = comment[i]["actual"].stringValue
+                    print("comment items matching placeID: \(comment[i])")
                 }
             }
         }

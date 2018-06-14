@@ -186,24 +186,18 @@
                                             </navigationItem>
                                         </items>
                                     </navigationBar>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tbb-5l-Kg7">
-                                        <rect key="frame" x="8" y="558" width="398" height="105"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tbb-5l-Kg7">
+                                        <rect key="frame" x="8" y="575" width="398" height="88"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="tbb-5l-Kg7" secondAttribute="height" multiplier="398:105" id="mKb-Rf-ShW"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="yes" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
                                             <outlet property="delegate" destination="0h9-Er-Te5" id="g8r-d8-EcY"/>
                                         </connections>
                                     </textView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VKU-jY-YBx">
-                                        <rect key="frame" x="8" y="211" width="398" height="330"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VKU-jY-YBx">
+                                        <rect key="frame" x="8" y="211" width="398" height="302"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="VKU-jY-YBx" secondAttribute="height" multiplier="199:165" id="UR9-rr-InC"/>
-                                        </constraints>
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEb-xO-VFk">
                                         <rect key="frame" x="8" y="664" width="398" height="34"/>
@@ -239,6 +233,14 @@
                                         <color key="textColor" red="0.9576478528964425" green="0.96112275676180725" blue="0.96561706852791873" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xf1-2Y-Z06">
+                                        <rect key="frame" x="347" y="521" width="47" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Upvote-light"/>
+                                        <connections>
+                                            <action selector="upvote:" destination="0h9-Er-Te5" eventType="touchUpInside" id="IS1-om-X0d"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="tbb-5l-Kg7" firstAttribute="leading" secondItem="bhw-KN-ABh" secondAttribute="leadingMargin" id="2Ad-uy-uuA"/>
@@ -382,6 +384,7 @@
     </scenes>
     <resources>
         <image name="CommentBox-logo" width="360" height="80"/>
+        <image name="Upvote-light" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="815-MU-MIb"/>
