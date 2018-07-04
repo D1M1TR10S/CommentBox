@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         //HTTP GET request to the API to receive all relevant comments
         let commentsURL = "http://167.99.107.99:5000/comments"
         Alamofire.request(commentsURL).responseJSON { response in
-            print("\n\n\n\n\n\n - HTTP GET response: \(response)\n\n\n\n\n\n")
+            print("\nHTTP GET response: \(response)\n")
             var json = JSON(response.data!)
             for var i in 0...json.count {
                 if json[i]["placeID"].stringValue == businessID {
@@ -87,8 +87,11 @@ extension ViewController: GMSAutocompleteViewControllerDelegate {
         commentDict = downloadComments(place.placeID)
 
         // Set label over search bar to place.name so the user knows their selection was received
-        label.text = " " + place.name
-        dismiss(animated: true, completion: nil)
+        //presentViewController(BusinessViewController, animated: true, completion: nil)
+        //performSegue(withIdentifier: "businessSegue", sender: self)
+        dismiss(animated: true, completion: { () in
+            self.performSegue(withIdentifier: "businessSegue", sender: nil)
+        })
     }
     
     

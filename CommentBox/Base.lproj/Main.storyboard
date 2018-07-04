@@ -44,10 +44,10 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="R7A-1d-DnO">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fns-6e-7zd">
-                                                <rect key="frame" x="299" y="6" width="95" height="32"/>
+                                                <rect key="frame" x="292" y="6" width="102" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                <state key="normal" title="Create Page">
+                                                <state key="normal" title="Login/Signup">
                                                     <color key="titleColor" red="0.94231703369999997" green="0.94231703369999997" blue="0.94231703369999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
@@ -78,30 +78,15 @@
                                 <rect key="frame" x="55.666666666666657" y="353" width="303" height="30"/>
                                 <connections>
                                     <action selector="autocompleteClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BR0-aS-a5n"/>
+                                    <segue destination="0h9-Er-Te5" kind="show" identifier="businessSegue" id="PaX-jW-DDc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPS-g5-5ho">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  business, company, place..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPS-g5-5ho">
                                 <rect key="frame" x="55.666666666666657" y="353" width="303" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXs-3K-Spe">
-                                <rect key="frame" x="149" y="413" width="116" height="30"/>
-                                <color key="backgroundColor" red="0.6228105675404666" green="0.63093933042646067" blue="0.65444559010152292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="69V-Yl-4Yq"/>
-                                    <constraint firstAttribute="width" secondItem="RXs-3K-Spe" secondAttribute="height" multiplier="58:15" id="NZB-z9-EHx"/>
-                                    <constraint firstAttribute="width" constant="116" id="tLW-hD-ECs"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Search">
-                                    <color key="titleColor" red="0.12190141694626314" green="0.12349244279821046" blue="0.12809327411167515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="0h9-Er-Te5" kind="show" identifier="businessSegue" id="exV-Kb-4w2"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.11440455168485641" green="0.36420160531997681" blue="0.55502784252166748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -110,14 +95,12 @@
                             <constraint firstItem="hBX-tC-v5J" firstAttribute="top" secondItem="iPS-g5-5ho" secondAttribute="top" id="Eo1-gJ-BIM"/>
                             <constraint firstItem="g7J-mX-avo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="H9C-jx-q7Y"/>
                             <constraint firstItem="hBX-tC-v5J" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PZR-G9-4M4"/>
-                            <constraint firstItem="RXs-3K-Spe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="60" id="WP1-Hm-1K1"/>
                             <constraint firstItem="hBX-tC-v5J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a4I-eu-k0K"/>
                             <constraint firstItem="hBX-tC-v5J" firstAttribute="bottom" secondItem="iPS-g5-5ho" secondAttribute="bottom" id="bBW-jl-gIw"/>
                             <constraint firstItem="hBX-tC-v5J" firstAttribute="height" secondItem="g7J-mX-avo" secondAttribute="height" id="bv1-oS-gcp"/>
                             <constraint firstItem="zPO-2Y-vcr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-150" id="eqe-CM-yKY"/>
                             <constraint firstItem="hBX-tC-v5J" firstAttribute="leading" secondItem="iPS-g5-5ho" secondAttribute="leading" id="kYB-xl-gZ7"/>
                             <constraint firstItem="hBX-tC-v5J" firstAttribute="width" secondItem="g7J-mX-avo" secondAttribute="width" id="neK-gf-EMp"/>
-                            <constraint firstItem="RXs-3K-Spe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r1A-RO-roR"/>
                             <constraint firstItem="zPO-2Y-vcr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wfq-2F-N5W"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
