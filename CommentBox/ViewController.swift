@@ -51,6 +51,7 @@ class ViewController: UIViewController {
         Alamofire.request(commentsURL).responseJSON { response in
             print("\nHTTP GET response: \(response)\n")
             var json = JSON(response.data!)
+            print("\n\n\n\nAll comments:\n", json)
             for var i in 0...json.count {
                 if json[i]["placeID"].stringValue == businessID {
                     self.commentDict[json[i]["id"].intValue] = json[i]["actual"].stringValue

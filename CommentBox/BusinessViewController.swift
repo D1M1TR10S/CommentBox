@@ -49,6 +49,8 @@ class BusinessViewController: UIViewController, UITableViewDelegate, UITableView
         
         tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        self.loadData();
     }
     
     func postComment(_ comment: String) {
@@ -100,12 +102,17 @@ class BusinessViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     
-    @IBAction func commentButton(_ sender: Any) {
+    @IBAction func commentButton(_ sender: Any)
+    {
         comment = postComment.text!
         postComment(comment)
-        print("\n\n\n\n\n\n - Comment: \(comment)\n\n\n\n\n\n")
+        print("\n - Comment: \(comment)\\n")
     }
-    
+
+    func loadData() {
+        // code to load data from network, and refresh the interface
+        tableView.reloadData()
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
